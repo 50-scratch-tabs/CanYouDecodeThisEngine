@@ -15,6 +15,8 @@ leaderboard={}
 ciphers=[]
 solved=open("build/bbcode/solved.bb","w",encoding="utf-8")
 current=open("build/bbcode/current.bb","w",encoding="utf-8")
+solved.write("[big][b]Solved Ciphers[/b][/big]")
+current.write("[big][b]Current Ciphers[/b][/big]")
 index=open("build/html/cipher/index.html","w",encoding="utf-8")
 index.write("<ul>")
 for row,i in enumerate(cipherlist):
