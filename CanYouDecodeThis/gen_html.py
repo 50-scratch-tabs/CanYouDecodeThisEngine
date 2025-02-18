@@ -1,3 +1,6 @@
+from datetime import datetime
+import math
+import pprint
 from . import quickfile
 import os
 import shutil
@@ -36,10 +39,18 @@ for row,i in enumerate(cipherlist):
     out.write(BBCode(i["description"]))
     out.write("</div>")
     ciphertexttype="code"
+    solved_date=datetime.strptime(i["solve date"],"%m/%d/%y") if i["solve date"]!="" else datetime.today()
+    creation_date=datetime.strptime(i["creation-date"],"%m/%d/%y")
+    days_unsolved=(solved_date-creation_date).days
     currententry=f'[quote][url={i["creation-link"]}]#{row}[/url] by [url=https://scratch.mit.edu/users/{i["creator"]}]@{i["creator"]}[/url][{ciphertexttype}]{i["ciphertext"]}[/{ciphertexttype}][/quote]'
+    coins_worth=max(math.floor(days_unsolved/7),3)
+    leaderboard.setdefault(i["creator"],0)
+    leaderboard[i["creator"]]+=coins_worth
     if i["solver"]=="":
         current.write(currententry)
     else:
+        leaderboard.setdefault(i["solver"],0)
+        leaderboard[i["solver"]]+=coins_worth/2
         solved.write(currententry)
         out.write("Solved by: "+i["solver"])
         out.write('<br>Solution:<div class="box">')
@@ -67,3 +78,5 @@ solved.close()
 current.close()
 open("build/html/solved.html","w").write('<link rel="stylesheet" href="styles.css">'+BBCode(open("build/bbcode/solved.bb").read()))
 open("build/html/current.html","w").write('<link rel="stylesheet" href="styles.css">'+BBCode(open("build/bbcode/current.bb").read()))
+for i in (sorted(leaderboard,reverse=True,key=lambda i: leaderboard[i])):
+    print(i+":",leaderboard[i])
