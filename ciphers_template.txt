@@ -1,0 +1,15 @@
+ciphertext:
+|ciphertext goes here
+|continuation of ciphertext
+creator: xxx
+creation-link: xxx
+creation-date: (mm/dd/yyyy)
+description:
+|description here
+|(multi line: in the same way as ciphertext)
+solver: xxx
+solve date: (mm/dd/yyyy)
+solution:
+|explaination of solution
+|can be multi line
+solve-link: xxx

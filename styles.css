@@ -1,0 +1,99 @@
+body {
+    background-color: #E6F0FF;
+    padding: 0;
+    font-family: sans-serif; /* Add a default font */
+    margin: 0;
+  }
+  
+  .navbar {
+    width: 100%;
+    background-color: #4D97FF;
+    color: white;
+    padding: 10px 20px; /* Add padding for better spacing */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Align items to start and end */
+    align-items: center; /* Vertically center items */
+  }
+  
+  .navbar h1 {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .navbar nav ul {  /* Style the navigation list */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar nav li {
+    margin-left: 20px; /* Space between list items */
+  }
+  
+  .navbar nav a {
+    color: white;
+    text-decoration: none; /* Remove underlines from links */
+  }
+  
+  
+  .main-container {
+    background-color: white;
+    margin: 20px auto; /* Margin top/bottom and auto left/right for centering */
+    max-width: 900px; /* Use max-width for responsiveness */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 0;
+    background-color: green;
+    color: white;
+    padding: 10px; /* Add padding to the heading */
+    border-radius: 5px; /* Round only the top corners */
+  }
+  
+  /* Media Queries - Simplified and more flexible */
+  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .main-container {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+  
+      .navbar {
+          flex-direction: column; /* Stack navbar elements */
+          align-items: flex-start;
+          padding: 10px;
+      }
+  
+      .navbar nav ul {
+          flex-direction: column; /* Stack the nav items */
+          margin-top: 10px;
+      }
+  
+      .navbar nav li {
+          margin: 5px 0; /* Add margin between stacked nav items */
+      }
+  }
+.box {
+    border: 3px solid #aaa;
+    border-radius: 5px;
+    background-color: lightgray;
+    padding:10px;
+    margin-left:2em;
+}
+pre {
+    padding:0;
+    margin:0;
+}
+code {
+    padding: 5px;
+    border: 3px solid;
+    border-color:black;
+    background-color:beige;
+}
+
+blockquote {
+    border: 1px solid gray;
+    padding: 3px;
+}

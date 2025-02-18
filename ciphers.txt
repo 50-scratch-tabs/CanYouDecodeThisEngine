@@ -1,0 +1,244 @@
+ciphertext:
+|See the original post for the ciphertext.[code]skibidi ohio[quote][/code][quote=you]only in[/quote]ohio
+creator: gilbert_given_189
+creation-link: https://scratch.mit.edu/discuss/post/8280345/
+creation-date: 12/13
+description:
+|A revision of that voice cipher thing I made. This time, it has the same size, but with better sound.
+|Ooh, what's this? A hint?
+|[code]
+|form Make a voice hum
+|	positive Frequency
+|	positive Length
+|endform
+|Create Sound from formula: "hum", 1, 0, length, 44100, "1/2 * (frequency*x mod 1) + randomGauss(0,0.1)"
+|[/code]
+solver: 
+solve date: 
+solution:
+|
+solve-link: 
+
+=====
+ciphertext:
+|Biu, hpvk zeu hpr kdqg wlrs dw vvm jwogqam paslgf negp pcgb ggsme.
+creator: 50_scratch_tabs
+creation-link: https://scratch.mit.edu/discuss/post/8281891/
+creation-date: 12/14/24
+description:
+|Anyone remember the last topic?
+solver: nembence
+solve date: 12/17/24
+solution:
+|In CyberChef, Vigenere Decode with key "decoins"
+solve-link: https://scratch.mit.edu/discuss/post/8287739/
+
+=====
+ciphertext:
+|193131273010383816250301429123114195034202220020251726383420222038323016291013201825123116424447383119202518
+|
+|[empty]
+|[empty]
+|[empty]
+|[empty]
+|[empty]
+|[empty]
+|[empty]
+|[empty]
+|[empty]
+|:
+|,
+|A
+|B
+|C
+|D
+|E
+|F
+|G
+|H
+|I
+|J
+|K
+|L
+|M
+|N
+|O
+|P
+|A
+|R
+|S
+|T
+|U
+|V
+|W
+|X
+|Y
+|Z
+|_
+|-
+|
+creator: BigNate469
+creation-link: https://scratch.mit.edu/discuss/post/8283290/
+creation-date: 12/14/24
+description:
+|Cloud variable letter encryption
+solver: davidtheplatform
+solve date: 12/16/24
+solution:
+|I'm not completely sure how the decode method works. I think the process is: Get the first digit. If it's a 0, add a space. Otherwise, get another digit, concat with the first one, and use it as an index into the provided table. Using it on the first input line gives a corrupted version of "https://en.scratch-wiki.info/wiki/User:BigNate469/thing“. That page has the project id ”828777617“. That project has the string ”36163011513626325117263225155120310“ in its notes. Decoding that gives ”YES, YOU FOUND IT"
+solve-link: https://scratch.mit.edu/discuss/post/8285718/
+
+=====
+ciphertext:
+|isxhkebtaursyecmiw
+creator: TheCreatorOfUnTV
+creation-link: https://scratch.mit.edu/discuss/post/8283098/
+creation-date: 12/14/24
+description:
+|Should be easy enough without hints.
+solver: 
+solve date: 
+solution:
+|
+solve-link: 
+
+=====
+ciphertext:
+|CL6734DZC9L6734Z362:6B34:+C//6B34:97F%6734Z36F%6C347F6H%6B34L962:6B34:+C0:6734Z36K%6B34AW60:6B34AW6VG6734Z36UW6C347F63:6C34%K62:6734Z36J*6B34AW6TG6734Z362:6B34D47L%6C34%K6NF6C34OQ6L*6C34Z36L%6B34%K6NF6B34:971:6734Z36L%6B34DZCNF6B34R/6L*6B34:+CG%6734Z36K%6B34L96K*6B34OQ61:6734DZCNF6834AW69L6A34:+C1:6B34%K60:6B34L962:6B34%K6K%6A34:+C2:6B34L96E%6C34%K6TG6734Z365:6B34AW6NF6B34DZCH%6B34AW6G%6734Z36D%6734Z36I*6B34AW6D%6B34OQ6H%6C347F6E%6B34:+CD%6C347F6G%6734Z362:6B34D47L*6C34AW6J%6B34D47OF6734Z36-Q6B34-NC1:6B34:+CNF6C34Z360:6B34L96F%6C34OQ6L%6B34%K6H%6734Z36F%6B34:97//6B34D47H%6C347F61:6734Z36D%6B34DZCG%6734Z36J*6B34:+C0:6B34AW6NF6C347F6H%6C34%K6L*6C34AW60:6B34%K6H%6C34%K6NF6C34R/6L*6C34AW6I*6B34OQ6NF6B347F6H%6734Z36D%6C34Z36//6C347F6H%6B34%K6L%6B34L962:6B34AW6G%6734DZCNF6A34OQ6K%6B34L96K*6B34AIC1:673441
+creator: co0lcr34t10ns
+creation-link: https://scratch.mit.edu/discuss/post/8301430/
+creation-date: 12/25/24
+description:
+|Very important message
+solver: Voxalice
+solve date: 1/22/25
+solution:
+|[url=https://gchq.github.io/CyberChef/#recipe=From_Base45('0-9A-Z%20$%25*%2B%5C%5C-./:',true)From_Hex('Space')&input=Q0w2NzM0RFpDOUw2NzM0WjM2Mjo2QjM0OitDLy82QjM0Ojk3RiU2NzM0WjM2RiU2QzM0N0Y2SCU2QjM0TDk2Mjo2QjM0OitDMDo2NzM0WjM2SyU2QjM0QVc2MDo2QjM0QVc2Vkc2NzM0WjM2VVc2QzM0N0Y2Mzo2QzM0JUs2Mjo2NzM0WjM2Sio2QjM0QVc2VEc2NzM0WjM2Mjo2QjM0RDQ3TCU2QzM0JUs2TkY2QzM0T1E2TCo2QzM0WjM2TCU2QjM0JUs2TkY2QjM0Ojk3MTo2NzM0WjM2TCU2QjM0RFpDTkY2QjM0Ui82TCo2QjM0OitDRyU2NzM0WjM2SyU2QjM0TDk2Syo2QjM0T1E2MTo2NzM0RFpDTkY2ODM0QVc2OUw2QTM0OitDMTo2QjM0JUs2MDo2QjM0TDk2Mjo2QjM0JUs2SyU2QTM0OitDMjo2QjM0TDk2RSU2QzM0JUs2VEc2NzM0WjM2NTo2QjM0QVc2TkY2QjM0RFpDSCU2QjM0QVc2RyU2NzM0WjM2RCU2NzM0WjM2SSo2QjM0QVc2RCU2QjM0T1E2SCU2QzM0N0Y2RSU2QjM0OitDRCU2QzM0N0Y2RyU2NzM0WjM2Mjo2QjM0RDQ3TCo2QzM0QVc2SiU2QjM0RDQ3T0Y2NzM0WjM2LVE2QjM0LU5DMTo2QjM0OitDTkY2QzM0WjM2MDo2QjM0TDk2RiU2QzM0T1E2TCU2QjM0JUs2SCU2NzM0WjM2RiU2QjM0Ojk3Ly82QjM0RDQ3SCU2QzM0N0Y2MTo2NzM0WjM2RCU2QjM0RFpDRyU2NzM0WjM2Sio2QjM0OitDMDo2QjM0QVc2TkY2QzM0N0Y2SCU2QzM0JUs2TCo2QzM0QVc2MDo2QjM0JUs2SCU2QzM0JUs2TkY2QzM0Ui82TCo2QzM0QVc2SSo2QjM0T1E2TkY2QjM0N0Y2SCU2NzM0WjM2RCU2QzM0WjM2Ly82QzM0N0Y2SCU2QjM0JUs2TCU2QjM0TDk2Mjo2QjM0QVc2RyU2NzM0RFpDTkY2QTM0T1E2SyU2QjM0TDk2Syo2QjM0QUlDMTo2NzM0NDE&ieol=CRLF&oeol=VT]Convert from Base45 to text; convert from hexadecimal to text.[/url]
+solve-link: https://scratch.mit.edu/discuss/post/8353615/
+
+=====
+ciphertext:
+|Mhw yll qf bzr aiiavaeex hiwl. Wwszymsih aaqa twfvnzm.
+creator: co0lcr34t10ns
+creation-link: https://scratch.mit.edu/discuss/post/8302326/
+creation-date: 12/26/24
+description:
+|Not a single autosolver found the key to the first cipher. Good luck. Hint: It's over 30 characters.
+solver: 
+solve date: 
+solution:
+|
+solve-link: 
+
+=====
+ciphertext:
+| \u0049\u0020\u0068\u0061\u0076\u0065\u0020\u0034\u0030\u0030\u0020\u0066\u006f\u006c\u006c\u006f\u0077\u0065\u0072\u0073
+creator: kRxZy_kRxZy
+creation-link: https://scratch.mit.edu/discuss/post/8305117/
+creation-date: 12/28/24
+description:
+|
+solver: 8to16
+solve date: 12/28/24
+solution:
+|Python: print(“ \u0049\u0020\u0068\u0061\u0076\u0065\u0020\u0034\u0030\u0030\u0020\\ u0066\u006f\u006c\u006c\u006f\u0077\u0065\u0072\u0073”)
+solve-link: https://scratch.mit.edu/discuss/post/8305119/
+
+=====
+ciphertext:
+|U+00000038U+00000074U+0000006fU+00000031U+00000036U+00000020U+00000069U+00000073U+00000020U+00000069U+0000006eU+00000073U+00000061U+0000006eU+00000065U+00000020U+00000061U+00000074U+00000020U+00000064U+00000065U+00000063U+0000006fU+00000064U+00000069U+0000006eU+00000067U+0000002eU+00000020U+00000054U+00000068U+00000069U+00000073U+00000020U+00000069U+00000073U+00000020U+00000074U+00000068U+00000065U+00000020U+00000073U+00000061U+0000006dU+00000065U+00000020U+00000064U+00000069U+00000066U+00000066U+00000069U+00000063U+00000075U+0000006cU+00000074U+00000079U+00000020U+00000061U+00000073U+00000020U+00000055U+00000054U+00000046U+0000002dU+00000038U+0000002eU+00000020U+00000049U+00000020U+00000064U+0000006fU+0000006eU+00000027U+00000074U+00000020U+0000006bU+0000006eU+0000006fU+00000077U+00000020U+00000061U+0000006eU+00000079U+00000020U+00000068U+00000061U+00000072U+00000064U+00000065U+00000072U+00000020U+0000006cU+00000061U+0000006eU+00000067U+00000075U+00000061U+00000067U+00000065U+00000073U+0000002e
+creator: kRxZy_kRxZy
+creation-link: https://scratch.mit.edu/discuss/post/8305135/
+creation-date: 12/28/24
+description:
+|idk anything harder
+solver: Voxalice
+solve date: 1/22/25
+solution:
+|[url=https://gchq.github.io/CyberChef/#recipe=Fork('U%2B000000','%5C%5Cn',false)From_Hex('Auto')&input=VSswMDAwMDAzOFUrMDAwMDAwNzRVKzAwMDAwMDZmVSswMDAwMDAzMVUrMDAwMDAwMzZVKzAwMDAwMDIwVSswMDAwMDA2OVUrMDAwMDAwNzNVKzAwMDAwMDIwVSswMDAwMDA2OVUrMDAwMDAwNmVVKzAwMDAwMDczVSswMDAwMDA2MVUrMDAwMDAwNmVVKzAwMDAwMDY1VSswMDAwMDAyMFUrMDAwMDAwNjFVKzAwMDAwMDc0VSswMDAwMDAyMFUrMDAwMDAwNjRVKzAwMDAwMDY1VSswMDAwMDA2M1UrMDAwMDAwNmZVKzAwMDAwMDY0VSswMDAwMDA2OVUrMDAwMDAwNmVVKzAwMDAwMDY3VSswMDAwMDAyZVUrMDAwMDAwMjBVKzAwMDAwMDU0VSswMDAwMDA2OFUrMDAwMDAwNjlVKzAwMDAwMDczVSswMDAwMDAyMFUrMDAwMDAwNjlVKzAwMDAwMDczVSswMDAwMDAyMFUrMDAwMDAwNzRVKzAwMDAwMDY4VSswMDAwMDA2NVUrMDAwMDAwMjBVKzAwMDAwMDczVSswMDAwMDA2MVUrMDAwMDAwNmRVKzAwMDAwMDY1VSswMDAwMDAyMFUrMDAwMDAwNjRVKzAwMDAwMDY5VSswMDAwMDA2NlUrMDAwMDAwNjZVKzAwMDAwMDY5VSswMDAwMDA2M1UrMDAwMDAwNzVVKzAwMDAwMDZjVSswMDAwMDA3NFUrMDAwMDAwNzlVKzAwMDAwMDIwVSswMDAwMDA2MVUrMDAwMDAwNzNVKzAwMDAwMDIwVSswMDAwMDA1NVUrMDAwMDAwNTRVKzAwMDAwMDQ2VSswMDAwMDAyZFUrMDAwMDAwMzhVKzAwMDAwMDJlVSswMDAwMDAyMFUrMDAwMDAwNDlVKzAwMDAwMDIwVSswMDAwMDA2NFUrMDAwMDAwNmZVKzAwMDAwMDZlVSswMDAwMDAyN1UrMDAwMDAwNzRVKzAwMDAwMDIwVSswMDAwMDA2YlUrMDAwMDAwNmVVKzAwMDAwMDZmVSswMDAwMDA3N1UrMDAwMDAwMjBVKzAwMDAwMDYxVSswMDAwMDA2ZVUrMDAwMDAwNzlVKzAwMDAwMDIwVSswMDAwMDA2OFUrMDAwMDAwNjFVKzAwMDAwMDcyVSswMDAwMDA2NFUrMDAwMDAwNjVVKzAwMDAwMDcyVSswMDAwMDAyMFUrMDAwMDAwNmNVKzAwMDAwMDYxVSswMDAwMDA2ZVUrMDAwMDAwNjdVKzAwMDAwMDc1VSswMDAwMDA2MVUrMDAwMDAwNjdVKzAwMDAwMDY1VSswMDAwMDA3M1UrMDAwMDAwMmU]Split string into two-digit hexadecimal numbers; convert numbers from hexadecimal to text;[/url] remove excess newlines.
+solve-link: https://scratch.mit.edu/discuss/post/8353615/
+
+=====
+ciphertext:
+| Removed - ASCII art. I'll post a base64 encoding of it soon, but it was causing trouble with my Python script.
+creator: nembence
+creation-link: https://scratch.mit.edu/discuss/post/8305258/
+creation-date: 12/28/24
+description:
+|Description: It's a graphical encoding.
+|Hint: [[u][color=transparent]                   [/color][/u]]
+solver: 
+solve date: 
+solution:
+|
+solve-link: 
+
+=====
+ciphertext:
+|9427601a8e0fdcd7725fa86fd073603dd34bc6bb07e19017aaab1344e6bad5a7cb108332baf5c9655b51ae199090c376e28798df4de5c6f43b61be9704dc9bc341182e5f952a95aecbbd7427f6a0c149fcc6c2282898bceef575ffc8df6bd5278bd4881cef4a5b8ba7f32388c5125cb0bfc748b8dd165d326a2c702bbafd199787284547110de34d03dbf653a010132d6ea30776c80f651b3e2fdaba75076ce45b51ae199090c376e28798df4de5c6f43b61be9704dc9bc341182e5f952a95aecbbd7427f6a0c149fcc6c2282898bceef575ffc8df6bd5278bd4881cef4a5b8ba7f32388c5125cb0bfc748b8dd165d326a2c702bbafd1997618ef3c930f115ab
+creator: 8to16
+creation-link: https://scratch.mit.edu/discuss/post/8342851/
+creation-date: 1/17/25
+description:
+|rc2 encryption
+solver: co0lcr34t10ns
+solve date: 1/22/25
+solution:
+|Lots of rc2 decryption, using the key:[code]ampelectrecuted[/code] which is 8to16's youtube channel name.
+solve-link: https://scratch.mit.edu/discuss/post/8352413/
+
+=====
+ciphertext:
+|Pidozy Novozn Xvivyv Hzsdxj Kvivhv
+creator: ThisIsTemp1
+creation-link: https://scratch.mit.edu/discuss/post/8375537/
+creation-date: 2/2/25
+description:
+|[url=https://gist.github.com/PythonScr557/9f25a719793baad284a701757571e4a5]I'm so confident that you can't solve this I'll even give you the code I used to encrypt it.[/url]
+solver: redspacecat
+solve date: 2/15/25
+solution:
+|Any Caesar Cipher brute force
+solve-link: https://scratch.mit.edu/discuss/post/8400698/
+
+=====
+ciphertext:
+|62.88.31.88.47. 83.59.62.62.95. 83.78.31.88. 17.59.34. 34.55. 62.88.31.88.47. 83.59.62.62.95. 69.88.39. 17.59.34. 90.59.26.62.
+creator: ThisIsTemp1
+creation-link: https://scratch.mit.edu/discuss/post/8377633/
+creation-date: 2/3/25
+description:
+|No, these aren't IP leaks.
+solver: 
+solve date: 
+solution:
+|
+solve-link: 
+
+=====
+ciphertext:
+|4539174446314537153345174433263629172844453844313720174445391744462637431728361744332613441743172816453937263200
+creator: BigNate469
+creation-link: https://scratch.mit.edu/discuss/post/8384811/
+creation-date: 2/7/25
+description:
+|honestly I've forgotten how I encoded this, so I can't help you. I do, however, remember [i]what[/i] I encoded, so I can verify solutions.
+solver: 
+solve date: 
+solution:
+|
+solve-link: 
+
+=====
+ciphertext:
+|736372617463682e6d69742e656475
+creator: kRxZy_kRxZy
+creation-link: https://scratch.mit.edu/discuss/post/8402881/
+creation-date: 2/17/25
+description:
+|Shall I give a hint?
+solver: JakubMzTrencina
+solve date: 2/17/25
+solution:
+|Any hex editor will suffice
+solve-link: https://scratch.mit.edu/discuss/post/8402934/
