@@ -7,7 +7,7 @@ def read(inp):
     for i in lines:
         if expecting_value:
             if i.startswith("|"):
-                t+=i[1:]
+                t+=i[1:]+"\n"
                 continue
             else:
                 current_record[directive]=t
