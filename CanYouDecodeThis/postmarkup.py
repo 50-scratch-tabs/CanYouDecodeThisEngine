@@ -1201,7 +1201,7 @@ class PostMarkup(object):
                             text, tag_token = tag_token.split('\n', 1)
                             if text.strip():                                                                                    
                                 nodes.append(standard_replace(text))                            
-                            nodes.append(u"</p><p>")
+                            nodes.append("</p><p>")
 
                 nodes.append(standard_replace(tag_token))                
                 continue

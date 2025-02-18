@@ -1,5 +1,5 @@
 ciphertext:
-|See the original post for the ciphertext.[code]skibidi ohio[quote][/code][quote=you]only in[/quote]ohio
+|See the original post for the ciphertext.
 creator: gilbert_given_189
 creation-link: https://scratch.mit.edu/discuss/post/8280345/
 creation-date: 12/13
