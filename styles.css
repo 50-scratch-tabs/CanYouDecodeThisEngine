@@ -96,4 +96,5 @@ code {
 blockquote {
     border: 1px solid gray;
     padding: 3px;
+    background-color: #333333;
 }
