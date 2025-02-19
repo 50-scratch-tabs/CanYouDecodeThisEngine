@@ -32,9 +32,9 @@ for row,i in enumerate(cipherlist):
 <h2>Can You Decode This?</h2><div class="container">
 <h3>Cipher #{row}</h3>
   """)
-    out.write('<link rel="stylesheet" href="../styles.css">Ciphertext:<div class="box">')
+    out.write('<link rel="stylesheet" href="../styles.css">Ciphertext:<div class="box"><div class="code"><pre>')
     out.write(BBCode(i["ciphertext"]))
-    out.write("</div>")
+    out.write("</pre></div></div>")
     out.write('Creator\'s note: <div class="box">')
     out.write(BBCode(i["description"]))
     out.write("</div>")
