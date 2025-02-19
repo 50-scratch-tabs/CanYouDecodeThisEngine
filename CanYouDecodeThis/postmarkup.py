@@ -55,7 +55,7 @@ def annotate_link(domain):
     domain -- Domain parsed from url
 
     """
-    return u" [%s]" % _escape(domain)
+    return " [%s]" % _escape(domain)
 
 
 _re_url = re.compile(r"((https?):(//)+[\w\d:#@%/;$()~_?\+-=\\\.&]*)", re.MULTILINE|re.UNICODE)
@@ -67,7 +67,7 @@ _re_break_groups = re.compile('\n', re.DOTALL|re.UNICODE)
 
 def textilize(s):
     """Remove markup from html"""
-    s = s.replace(u"<p>", u" ")
+    s = s.replace("<p>", " ")
     return _re_html.sub("", s)
 
 def get_excerpt(post):
@@ -79,7 +79,7 @@ def get_excerpt(post):
     if match is None:
         return ""
     excerpt = match.group(0)
-    excerpt = excerpt.replace('\n', u"<br/>")
+    excerpt = excerpt.replace('\n', "<br/>")
     return _re_remove_markup.sub("", excerpt)
 
 
@@ -91,7 +91,7 @@ def strip_bbcode(bbcode):
     """
 
     TOKEN_TEXT = PostMarkup.TOKEN_TEXT
-    return u"".join([t[1] for t in PostMarkup.tokenize(bbcode) if t[0] == TOKEN_TEXT])
+    return "".join([t[1] for t in PostMarkup.tokenize(bbcode) if t[0] == TOKEN_TEXT])
 
 
 class TagBase(object):
@@ -145,7 +145,7 @@ class TagBase(object):
 
     def get_contents_text(self, parser):
         """Returns the string between the the open and close tag, minus bbcode tags."""
-        return u"".join(parser.get_text_nodes(self.open_node_index, self.close_node_index))
+        return "".join(parser.get_text_nodes(self.open_node_index, self.close_node_index))
 
     def skip_contents(self, parser):
         """Skips the contents of a tag while rendering."""
@@ -170,24 +170,24 @@ class SimpleTag(TagBase):
 
     def render_open(self, parser, node_index):
         tag_data = parser.tag_data
-        tag_key = u"SimpleTag.%s_nest_level" % self.html_name
+        tag_key = "SimpleTag.%s_nest_level" % self.html_name
         nest_level = tag_data[tag_key] = tag_data.setdefault(tag_key, 0) + 1
 
         if nest_level > 1:
-            return u""
+            return ""
 
-        return u"<%s>"%self.html_name
+        return "<%s>"%self.html_name
 
     def render_close(self, parser, node_index):
 
         tag_data = parser.tag_data
-        tag_key = u"SimpleTag.%s_nest_level"%self.html_name
+        tag_key = "SimpleTag.%s_nest_level"%self.html_name
         tag_data[tag_key] -= 1
 
         if tag_data[tag_key] > 0:
             return ''
 
-        return u"</%s>"%self.html_name
+        return "</%s>"%self.html_name
 
 
 class DivStyleTag(TagBase):
@@ -225,7 +225,7 @@ class LinkTag(TagBase):
         nest_level = tag_data['link_nest_level'] = tag_data.setdefault('link_nest_level', 0) + 1
 
         if nest_level > 1:
-            return u""
+            return ""
 
         if self.params:
             url = self.params.strip()
@@ -251,16 +251,16 @@ class LinkTag(TagBase):
             safe_chars = self._safe_chars
             def replace(c):
                 if c not in safe_chars:
-                    return u"%%%02X" % ord(c)
+                    return "%%%02X" % ord(c)
                 else:
                     return c
-            return u"".join([replace(c) for c in s])
+            return "".join([replace(c) for c in s])
 
         self.url = percent_encode(url)
 
         if not self.url:
             self.is_link_empty = True
-            return u""
+            return ""
 
         return '<a href="%s">' % PostMarkup.standard_replace_no_break(self.url)
 
@@ -285,7 +285,7 @@ class LinkTag(TagBase):
         if domain and self.annotate_links:
             return annotate_link(domain)
         else:
-            return u""
+            return ""
 
 class TableTag(TagBase):
 
@@ -305,7 +305,7 @@ class TableTag(TagBase):
             return '<table>'
 
     def render_close(self, parser, node_index):
-        return u"</table>"
+        return "</table>"
 
 class TableRowTag(TagBase):
 
@@ -325,7 +325,7 @@ class TableRowTag(TagBase):
             return '<tr>'
 
     def render_close(self, parser, node_index):
-        return u"</tr>"
+        return "</tr>"
 
 class TableDataTag(TagBase):
 
@@ -345,7 +345,7 @@ class TableDataTag(TagBase):
             return '<td>'
 
     def render_close(self, parser, node_index):
-        return u"</td>"
+        return "</td>"
 
 class QuoteTag(TagBase):
 
@@ -359,12 +359,12 @@ class QuoteTag(TagBase):
             return '<blockquote>'
 
     def render_close(self, parser, node_index):
-        return u"</blockquote>"
+        return "</blockquote>"
 
 
 class SearchTag(TagBase):
 
-    def __init__(self, name, url, label=u"", annotate_links=True, **kwargs):
+    def __init__(self, name, url, label="", annotate_links=True, **kwargs):
         super(SearchTag, self).__init__(name, inline=True)
         self.url = url
         self.label = label
@@ -378,7 +378,7 @@ class SearchTag(TagBase):
             search=self.get_contents(parser)
         link = '<a href="%s">' % PostMarkup.standard_replace_no_break(self.url)
         if '%' in link:
-            return link % quote_plus(search.encode(u"UTF-8"))
+            return link % quote_plus(search.encode("UTF-8"))
         else:
             return link
 
@@ -409,7 +409,7 @@ class PygmentsCodeTag(TagBase):
             contents = _escape(contents)
             return '<div class="code"><pre>%s</pre></div>' % contents
         
-        formatter = HtmlFormatter(linenos=self.line_numbers, cssclass=u"code")
+        formatter = HtmlFormatter(linenos=self.line_numbers, cssclass="code")
         hcontents = highlight(contents, lexer, formatter)
         hcontents = hcontents.strip()
 
@@ -448,7 +448,7 @@ class ImgTag(TagBase):
         else:
             url = strip_bbcode(contents)
             
-        url = url.replace('"', u"%22").strip()
+        url = url.replace('"', "%22").strip()
         if not url:
             return ''
         scheme, netloc, path, params, query, fragment = urlparse(url)
@@ -469,33 +469,33 @@ class ListTag(TagBase):
 
     def render_open(self, parser, node_index):
 
-        self.close_tag = u""
+        self.close_tag = ""
         tag_data = parser.tag_data
-        tag_data.setdefault(u"ListTag.count", 0)
+        tag_data.setdefault("ListTag.count", 0)
 
-        if tag_data[u"ListTag.count"]:
-            return u""
+        if tag_data["ListTag.count"]:
+            return ""
 
-        tag_data[u"ListTag.count"] += 1
-        tag_data[u"ListItemTag.initial_item"]=True
+        tag_data["ListTag.count"] += 1
+        tag_data["ListItemTag.initial_item"]=True
 
-        if self.ordered or self.params == u"1":
-            self.close_tag = u"</li></ol>"
-            return u"<ol><li>"
-        elif self.params == u"a":
-            self.close_tag = u"</li></ol>"
+        if self.ordered or self.params == "1":
+            self.close_tag = "</li></ol>"
+            return "<ol><li>"
+        elif self.params == "a":
+            self.close_tag = "</li></ol>"
             return '<ol style="list-style-type: lower-alpha;"><li>'
-        elif self.params == u"A":
-            self.close_tag = u"</li></ol>"
+        elif self.params == "A":
+            self.close_tag = "</li></ol>"
             return '<ol style="list-style-type: upper-alpha;"><li>'
         else:
-            self.close_tag = u"</li></ul>"
-            return u"<ul><li>"
+            self.close_tag = "</li></ul>"
+            return "<ul><li>"
 
     def render_close(self, parser, node_index):
 
         tag_data = parser.tag_data
-        tag_data[u"ListTag.count"] -= 1
+        tag_data["ListTag.count"] -= 1
 
         return self.close_tag
  
@@ -514,31 +514,31 @@ class ListItemTag(TagBase):
     def render_open(self, parser, node_index):
 
         tag_data = parser.tag_data
-        if not tag_data.setdefault(u"ListTag.count", 0):
-            return u""
+        if not tag_data.setdefault("ListTag.count", 0):
+            return ""
 
-        if tag_data[u"ListItemTag.initial_item"]:
-            tag_data[u"ListItemTag.initial_item"] = False
+        if tag_data["ListItemTag.initial_item"]:
+            tag_data["ListItemTag.initial_item"] = False
             return
 
-        return u"</li><li>"
+        return "</li><li>"
 
 
 class SizeTag(TagBase):
 
-    valid_chars = frozenset(u"0123456789")
+    valid_chars = frozenset("0123456789")
 
     def __init__(self, name, **kwargs):
         TagBase.__init__(self, name, inline=True)
 
     def render_open(self, parser, node_index):
         try:
-            self.size = int(u"".join([c for c in self.params if c in self.valid_chars]))
+            self.size = int("".join([c for c in self.params if c in self.valid_chars]))
         except ValueError:
             self.size = None
 
         if self.size is None:
-            return u""
+            return ""
 
         self.size = self.validate_size(self.size)
 
@@ -546,7 +546,7 @@ class SizeTag(TagBase):
 
     def render_close(self, parser, node_index):
         if self.size is None:
-            return u""
+            return ""
         return '</span>'
 
     def validate_size(self, size):
@@ -576,7 +576,7 @@ class ColorTag(TagBase):
                 self.color = None
 
         if not self.color:
-            return u""
+            return ""
 
         return '<span style="color:%s">' % self.color
 
@@ -715,13 +715,13 @@ def create(include=None,
     add_tag(QuoteTag, 'quote')
 
     add_tag(SearchTag, 'wiki',
-            u"http://en.wikipedia.org/wiki/Special:Search?search=%s", 'wikipedia.com', **kwargs)
+            "http://en.wikipedia.org/wiki/Special:Search?search=%s", 'wikipedia.com', **kwargs)
     add_tag(SearchTag, 'google',
-            u"http://www.google.com/search?hl=en&q=%s&btnG=Google+Search", 'google.com', **kwargs)
+            "http://www.google.com/search?hl=en&q=%s&btnG=Google+Search", 'google.com', **kwargs)
     add_tag(SearchTag, 'dictionary',
-            u"http://dictionary.reference.com/browse/%s", 'dictionary.com', **kwargs)
+            "http://dictionary.reference.com/browse/%s", 'dictionary.com', **kwargs)
     add_tag(SearchTag, 'dict',
-            u"http://dictionary.reference.com/browse/%s", 'dictionary.com', **kwargs)
+            "http://dictionary.reference.com/browse/%s", 'dictionary.com', **kwargs)
 
     add_tag(ImgTag, 'img')
     add_tag(ListTag, 'list')
@@ -730,15 +730,15 @@ def create(include=None,
     add_tag(ListItemTag, '*')
     add_tag(ListItemTag, 'li')
 
-    add_tag(SizeTag, u"size")
-    add_tag(ColorTag, u"color")
-    add_tag(CenterTag, u"center")
-    add_tag(RightTag, u"right")
+    add_tag(SizeTag, "size")
+    add_tag(ColorTag, "color")
+    add_tag(CenterTag, "center")
+    add_tag(RightTag, "right")
     
     # Table information
-    add_tag(TableTag, u"table")
-    add_tag(TableRowTag, u"tr")
-    add_tag(TableDataTag, u"td")
+    add_tag(TableTag, "table")
+    add_tag(TableRowTag, "tr")
+    add_tag(TableDataTag, "td")
     
     if use_pygments:
         assert pygments_available, "Install Pygments (http://pygments.org/) or call create with use_pygments=False"
@@ -746,7 +746,7 @@ def create(include=None,
     else:
         add_tag(CodeTag, 'code', **kwargs)    
 
-    add_tag(ParagraphTag, u"p")
+    add_tag(ParagraphTag, "p")
 
     return postmarkup
         
@@ -757,7 +757,7 @@ class MultiReplace(object):
         # string to string mapping; use a regular expression
         keys = repl_dict.keys()
         keys=sorted(keys,reverse=True) # lexical order
-        pattern = u"|".join([re.escape(key) for key in keys])
+        pattern = "|".join([re.escape(key) for key in keys])
         self.pattern = re.compile(pattern)
         self.dict = repl_dict
         self.sub = self.pattern.sub
@@ -788,10 +788,10 @@ _re_squotes = re.compile(r"\s'(.+?)'")
 def _cosmetic_replace(s):
     s = PostMarkup.cosmetic_replace(s)
     def repl_dquotes(match):
-        return u"&ldquo;%s&rdquo;" % match.group(0)[1:-1]        
+        return "&ldquo;%s&rdquo;" % match.group(0)[1:-1]        
     s = _re_dquotes.sub(repl_dquotes, s)
     def repl_squotes(match):        
-        return u" &lsquo;%s&rsquo;" % match.group(1)
+        return " &lsquo;%s&rsquo;" % match.group(1)
     s = _re_squotes.sub(repl_squotes, s)
     return s
 
@@ -1022,7 +1022,7 @@ class PostMarkup(object):
                         
                 append(tag_token)
 
-        return u"".join(text_tokens)
+        return "".join(text_tokens)
 
     def __init__(self, tag_factory=None):
         self.tag_factory = tag_factory or TagFactory()
@@ -1056,9 +1056,9 @@ class PostMarkup(object):
         original_html = ''
         while original_html != html:
             original_html = html
-            html = cls._re_blank_tags.sub(u"", html)
-            html = cls._re_blank_with_spaces_tags.sub(u" ", html)
-        html = _re_break_groups.sub(u"\n", html)
+            html = cls._re_blank_tags.sub("", html)
+            html = cls._re_blank_with_spaces_tags.sub(" ", html)
+        html = _re_break_groups.sub("\n", html)
         return html
 
     def render_to_html(self,
@@ -1103,7 +1103,7 @@ class PostMarkup(object):
             post_markup = _re_break_groups.sub('\n', post_markup)
 
         parser = _Parser(self, tag_data=tag_data)
-        parser.tag_data.setdefault(u"output", {})
+        parser.tag_data.setdefault("output", {})
         parser.markup = post_markup
 
         if exclude_tags is None:
@@ -1167,7 +1167,7 @@ class PostMarkup(object):
         TOKEN_TEXT = PostMarkup.TOKEN_TEXT
                 
         if paragraphs:
-            nodes.append(u"<p>")
+            nodes.append("<p>")
         
         # Pass 1
         for tag_type, tag_token, start_pos, end_pos in self.tokenize(post_markup):
@@ -1259,7 +1259,7 @@ class PostMarkup(object):
 
                     close_tag(tag)
                     if paragraphs and not tag.inline and not tag_stack:
-                        nodes.append(u"</p><p>")
+                        nodes.append("</p><p>")
 
                     if not tag.inline:
                         remove_next_newline = True
@@ -1292,7 +1292,7 @@ class PostMarkup(object):
                 text_append(node_text)
             parser.render_node_index += 1
 
-        html = u"".join(text)
+        html = "".join(text)
         if clean:
             html = self.cleanup_html(html)        
         return html
