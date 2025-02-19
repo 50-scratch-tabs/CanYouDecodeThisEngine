@@ -42,7 +42,7 @@ for row,i in enumerate(cipherlist):
     solved_date=datetime.strptime(i["solve date"],"%m/%d/%y") if i["solve date"]!="" else datetime.today()
     creation_date=datetime.strptime(i["creation-date"],"%m/%d/%y")
     days_unsolved=(solved_date-creation_date).days
-    currententry=f'[quote][url={i["creation-link"]}]#{row}[/url] by [url=https://scratch.mit.edu/users/{i["creator"]}]@{i["creator"]}[/url][{ciphertexttype}]{i["ciphertext"]}[/{ciphertexttype}][/quote]'
+    currententry=f'[quote][url={i["creation-link"]}]#{row}[/url] by [url=https://scratch.mit.edu/users/{i["creator"]}]@{i["creator"]}[/url][{ciphertexttype}]{i["ciphertext"]}[/{ciphertexttype}]{i["description"]}[/quote]'
     coins_worth=max(math.floor(days_unsolved/7),3)
     leaderboard.setdefault(i["creator"],0)
     leaderboard[i["creator"]]+=coins_worth
