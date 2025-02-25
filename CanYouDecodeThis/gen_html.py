@@ -14,6 +14,7 @@ if os.path.exists("build"):
 os.makedirs("build/bbcode")
 os.makedirs("build/html/cipher")
 cipherlist=quickfile.read(open("ciphers.txt",encoding="utf-8").read())
+open("build/ciphers.json","w").write(json.dumps(cipherlist))
 leaderboard={}
 ciphers=[]
 solved=open("build/bbcode/solved.bb","w",encoding="utf-8")
